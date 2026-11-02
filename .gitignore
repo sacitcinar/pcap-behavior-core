@@ -1,0 +1,35 @@
+# Interpreter and test artefacts
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+.tox/
+.venv/
+venv/
+
+# Packaging results
+build/
+dist/
+*.egg-info/
+
+# Reports, temporary index files, capture payloads
+*.pcap
+*.pcapng
+*.cap
+*.pcap.gz
+*.pcap.bz2
+*.sqlite
+*.sqlite-shm
+*.sqlite-wal
+*.observations.json
+*_report.json
+*_report.html
+*.html
+*.tmp
+*.log
+
+# Common credentials and local configuration
+.env
+.env.*
+*.pem
+*.key

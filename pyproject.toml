@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pcap-behavior-core"
+version = "0.24.0"
+description = "Offline analysis of network behavior in PCAP files"
+readme = "README.md"
+license = {file = "LICENSE"}
+requires-python = ">=3.10"
+keywords = ["pcap", "network", "forensics", "traffic-analysis"]
+classifiers = [
+        "Environment :: Console",
+    "License :: OSI Approved :: MIT License",
+    "Intended Audience :: Information Technology",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: System :: Networking :: Monitoring",
+]
+
+[project.scripts]
+pcap-behavior-core = "pcapcore.cli:main"
+
+[tool.setuptools]
+packages = ["pcapcore"]
