@@ -32,56 +32,49 @@ flowchart LR
 The program reads packets, organizes traffic into flows, evaluates supported behavior patterns, and writes the analysis results to JSON and HTML files.
 ## 📦 Installation
 
-**Requirements:** Python 3.10 or later.
+**Requirements**
+- Python 3.10 or newer
+- Git (for cloning the repository)
 
-Clone or download the repository, then run the following commands in its root directory:
+Clone the repository:
+
+```bash
+git clone https://github.com/sacitcinar/pcap-behavior-core.git
+cd pcap-behavior-core
+```
+
+Install PCAP Behavior Core:
 
 ```bash
 python -m pip install .
 ```
 
-You can also run the source directly without installing it:
-
-```bash
-python -m pcapcore capture.pcap
-```
-
 ## 🚀 Usage
 
+Analyze a PCAP file:
+
 ```bash
 python -m pcapcore capture.pcap
 ```
 
-For a full analysis, the default outputs are written next to the input file:
+The analysis generates two files by default:
 
-```text
-capture.pcap.observations.json
-capture.pcap.observations.html
-```
+- `capture.pcap.observations.json` — Structured analysis results
+- `capture.pcap.observations.html` — Standalone interactive HTML report
 
-To choose a location for both outputs:
+Specify a custom output path:
 
 ```bash
 python -m pcapcore capture.pcap -o results/analysis.json
 ```
 
-This creates `results/analysis.json` and `results/analysis.html`. The `-o` option is optional. With a successful full analysis, HTML output is enabled by default.
+This generates `results/analysis.json` and `results/analysis.html`.
 
-If installed with `pip`, the CLI command is also available:
-
-```bash
-pcap-behavior-core capture.pcap
-```
-
-Additional options:
+View all available command-line options:
 
 ```bash
 python -m pcapcore --help
-python -m pcapcore capture.pcap --local-cidr 192.168.1.0/24
-python -m pcapcore capture.pcap --overwrite
 ```
-
-The input PCAP is not modified. Existing report files are not overwritten unless `--overwrite` is specified.
 
 ## 📊 Output
 
