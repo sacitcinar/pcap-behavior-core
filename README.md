@@ -20,6 +20,16 @@ HTML report that can be opened without a server or internet connection.
 
 The tool does not use threat signatures, external threat-intelligence services or cloud APIs.
 
+## 🔄 How It Works
+
+```mermaid
+flowchart LR
+    A["PCAP"] --> B["Packet & Flow Analysis"]
+    B --> C["Behavior Findings"]
+    C --> D["JSON + HTML"]
+```
+
+The program reads packets, organizes traffic into flows, evaluates supported behavior patterns, and writes the analysis results to JSON and HTML files.
 ## 📦 Installation
 
 **Requirements:** Python 3.10 or later.
